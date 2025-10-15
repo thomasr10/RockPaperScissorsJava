@@ -23,7 +23,7 @@ class Main {
                 break;
             }
 
-            userChoice = options[num];
+            userChoice = options[num - 1];
 
             game(computerChoice, userChoice);
 
@@ -45,11 +45,10 @@ class Main {
         if (computerChoice.equals(userChoice)) {
             System.out.println("Choix de l'ordinateur : " + computerChoice + " = Egalité !");
 
-        } else if (userChoice.equals("Feuille") && computerChoice.equals("Pierre")) {
-            System.out.println("Choix de l'ordinateur : " + computerChoice + " = Gagné !");
-        } else if (userChoice.equals("Pierre") && computerChoice.equals("Ciseaux")) {
-            System.out.println("Choix de l'ordinateur : " + computerChoice + " = Gagné !");
-        } else if (userChoice.equals("Ciseaux") && computerChoice.equals("Feuille")) {
+        } else if ((userChoice.equals("Feuille") && computerChoice.equals("Pierre")) || 
+        (userChoice.equals("Pierre") && computerChoice.equals("Ciseaux")) || 
+        (userChoice.equals("Ciseaux") && computerChoice.equals("Feuille"))) {
+
             System.out.println("Choix de l'ordinateur : " + computerChoice + " = Gagné !");
         } else {
             System.out.println("Choix de l'ordinateur : " + computerChoice + " = Perdu !");
