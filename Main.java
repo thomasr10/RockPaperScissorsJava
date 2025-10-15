@@ -20,7 +20,7 @@ class Main {
 
             if (num < 1 || num > 3) {
                 System.out.println("Choix invalide");
-                break;
+                continue;
             }
 
             userChoice = options[num - 1];
